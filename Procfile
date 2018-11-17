@@ -1,1 +1,1 @@
-web: bottle app:app
+web: python app.py
