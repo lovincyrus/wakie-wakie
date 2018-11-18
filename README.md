@@ -1,7 +1,7 @@
 # wakie-wakie
 
 <p align="center">
-  <img src="https://media.giphy.com/media/DorNejgFGiygE/giphy.gif" style="width: 500px;height: 300px;"/>
+  <img src="https://media.giphy.com/media/DorNejgFGiygE/giphy.gif" width="500" height="300"/>
 </p>
 
 ## Requirements
