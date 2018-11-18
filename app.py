@@ -16,7 +16,7 @@ AUTH_TOKEN = os.environ['AUTH_TOKEN']
 twilio_client = Client(ACCOUNT_SID, AUTH_TOKEN)
 
 TWILIO_NUMBER = os.environ.get('TWILIO_NUMBER', '+16507708871')
-NGROK_BASE_URL = os.environ.get('NGROK_BASE_URL', 'https://wakie-wakie.herokuapp.com')
+BASE_URL = os.environ.get('BASE_URL', 'https://wakie-wakie.herokuapp.com')
 
 
 @route('/')
@@ -47,12 +47,8 @@ def outbound_call(outbound_phone_number):
     # the previous function that responds with TwiML instructions
     twilio_client.calls.create(to=outbound_phone_number,
                                from_=TWILIO_NUMBER,
-                               url=NGROK_BASE_URL)
+                               url=BASE_URL)
     return Response('Calling ' + outbound_phone_number)
-
-
-# if __name__ == '__main__':
-    # run(host='127.0.0.1', port=9000, debug=False, reloader=True)
 
 
 if os.environ.get('APP_LOCATION') == 'heroku':
