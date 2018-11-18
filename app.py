@@ -54,8 +54,7 @@ def outbound_call(outbound_phone_number):
     twilio_client.calls.create(to=outbound_phone_number,
                                from_=TWILIO_NUMBER,
                                url=BASE_URL)
-    for _ in range(10):
-        return Response('Calling ' + outbound_phone_number)
+    return Response('Calling ' + outbound_phone_number)
 
 
 if os.environ.get('APP_LOCATION') == 'heroku':
