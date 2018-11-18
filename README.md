@@ -1,4 +1,4 @@
-# wakie
+# wakie-wakie
 
 ## Requirements
 + Python
@@ -6,12 +6,11 @@
 + Twilio Voice
 
 ## Config
-1. get a TEST phone number
-2. ![config](config.png)
-3. ![base_url](base_url.png)
-4. Config TEST number -> `Voice & Fax` -> https://wakie-wakie.herokuapp.com
+1. get a TEST phone number from Twilio
+2. <br/> ![config](config.png)
+3. Config TEST number -> `Voice & Fax` -> https://wakie-wakie.herokuapp.com <br/> ![base_url](base_url.png)
 
 ## Run
-https://wakie-wakie.herokuapp.com/call/`<outbound_phone_number>`
+https://wakie-wakie.herokuapp.com/call/<outbound_phone_number>
 
 `<outbound_phone_number>` = 16501234567

@@ -19,11 +19,13 @@ twilio_client = Client(ACCOUNT_SID, AUTH_TOKEN)
 TWILIO_NUMBER = os.environ.get('TWILIO_NUMBER', '+16507708871')
 BASE_URL = os.environ.get('BASE_URL', 'https://wakie-wakie.herokuapp.com')
 
+calls = twilio_client.calls.list()
+
 
 @route('/')
 def index():
     """Returns standard text response to show app is working."""
-    return Response("wakie wakie is running!")
+    return Response("wakie wakie is up and running!")
 
 
 # @post('/twiml')
@@ -35,6 +37,11 @@ def index():
 #     response = VoiceResponse()
 #     response.say("Hello, this call is from a Bottle web application.")
 #     return Response(str(response))
+
+@post('/call-logs')
+def call_logs():
+    for record in calls:
+        print(record.sid)
 
 
 @route('/call/<outbound_phone_number>')
