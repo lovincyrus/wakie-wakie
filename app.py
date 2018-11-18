@@ -16,7 +16,7 @@ AUTH_TOKEN = os.environ['AUTH_TOKEN']
 twilio_client = Client(ACCOUNT_SID, AUTH_TOKEN)
 
 TWILIO_NUMBER = os.environ.get('TWILIO_NUMBER', '+16507708871')
-NGROK_BASE_URL = os.environ.get('NGROK_BASE_URL', 'https://23b05a6b.ngrok.io')
+NGROK_BASE_URL = os.environ.get('NGROK_BASE_URL', 'https://wakie-wakie.herokuapp.com')
 
 
 @route('/')
