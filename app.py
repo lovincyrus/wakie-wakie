@@ -38,10 +38,10 @@ def index():
 #     response.say("Hello, this call is from a Bottle web application.")
 #     return Response(str(response))
 
-@post('/call-logs')
+@route('/call-logs')
 def call_logs():
     for record in calls:
-        print(record.sid)
+        return (record.sid)
 
 
 @route('/call/<outbound_phone_number>')
