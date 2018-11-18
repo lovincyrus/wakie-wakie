@@ -2,7 +2,7 @@ import os
 import bottle
 from bottle import route, run, post, Response
 # from twilio import twiml
-from twilio.twiml.voice_response import VoiceResponse
+# from twilio.twiml.voice_response import VoiceResponse
 from twilio.rest import Client
 
 app = bottle.default_app()
@@ -25,16 +25,15 @@ def index():
     return Response("Bottle app up and running!")
 
 
-@post('/twiml')
-def twiml_response():
-    """Provides TwiML instructions in response to a Twilio POST webhook
-    event so that Twilio knows how to handle the outbound phone call
-    when someone picks up the phone.
-    """
-    response = VoiceResponse()
-    response.say("Hello, this call is from a Bottle web application.")
-    # response.play("https://api.twilio.com/cowbell.mp3", loop=10)
-    return Response(str(response))
+# @post('/twiml')
+# def twiml_response():
+#     """Provides TwiML instructions in response to a Twilio POST webhook
+#     event so that Twilio knows how to handle the outbound phone call
+#     when someone picks up the phone.
+#     """
+#     response = VoiceResponse()
+#     response.say("Hello, this call is from a Bottle web application.")
+#     return Response(str(response))
 
 
 @route('/dial-phone/<outbound_phone_number>')
@@ -48,7 +47,7 @@ def outbound_call(outbound_phone_number):
     # the previous function that responds with TwiML instructions
     twilio_client.calls.create(to=outbound_phone_number,
                                from_=TWILIO_NUMBER,
-                               url=NGROK_BASE_URL + '/twiml')
+                               url=NGROK_BASE_URL)
     return Response('Calling ' + outbound_phone_number)
 
 
