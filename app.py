@@ -15,7 +15,7 @@ AUTH_TOKEN = os.environ['AUTH_TOKEN']
 
 twilio_client = Client(ACCOUNT_SID, AUTH_TOKEN)
 
-TWILIO_NUMBER = os.environ.get('TWILIO_NUMBER', '+16507708871')
+TWILIO_NUMBER = os.environ.get('TWILIO_NUMBER', '+16473602674')
 BASE_URL = os.environ.get('BASE_URL', 'https://wakie-wakie.herokuapp.com')
 
 
