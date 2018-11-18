@@ -36,7 +36,7 @@ def index():
 #     return Response(str(response))
 
 
-@route('/dial-phone/<outbound_phone_number>')
+@route('/call/<outbound_phone_number>')
 def outbound_call(outbound_phone_number):
     """Uses the Twilio Python helper library to send a POST request to
     Twilio telling it to dial an outbound phone call from our
