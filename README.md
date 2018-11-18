@@ -1,5 +1,7 @@
 # wakie-wakie
 
+![wake-up](https://media.giphy.com/media/DorNejgFGiygE/giphy.gif)
+
 ## Requirements
 + Python
 + Bottle
