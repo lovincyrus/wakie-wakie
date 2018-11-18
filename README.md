@@ -1,6 +1,8 @@
 # wakie-wakie
 
-![wake-up](https://media.giphy.com/media/DorNejgFGiygE/giphy.gif)
+<p align="center">
+  <img src="https://media.giphy.com/media/DorNejgFGiygE/giphy.gif" style="width: 500px;height: 300px;"/>
+</p>
 
 ## Requirements
 + Python
