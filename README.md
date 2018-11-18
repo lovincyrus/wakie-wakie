@@ -6,13 +6,12 @@
 + Twilio Voice
 
 ## Config
-+ ACCOUNT_SID
-+ AUTH_TOKEN
-+ APP_LOCATION
-+ TEST number from Twilio
-+ Config TEST number -> `Voice & Fax` -> https://wakie-wakie.herokuapp.com
+1. get a TEST phone number
+2. ![config](config.png)
+3. ![base_url](base_url.png)
+4. Config TEST number -> `Voice & Fax` -> https://wakie-wakie.herokuapp.com
 
 ## Run
-https://wakie-wakie.herokuapp.com/call/<outbound_phone_number>
+https://wakie-wakie.herokuapp.com/call/`<outbound_phone_number>`
 
-<outbound_phone_number> = 16501234567
+`<outbound_phone_number>` = 16501234567

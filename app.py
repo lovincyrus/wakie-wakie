@@ -1,3 +1,4 @@
+#!/usr/local/bin/python
 import os
 import bottle
 from bottle import route, run, post, Response
@@ -22,7 +23,7 @@ BASE_URL = os.environ.get('BASE_URL', 'https://wakie-wakie.herokuapp.com')
 @route('/')
 def index():
     """Returns standard text response to show app is working."""
-    return Response("Bottle app up and running!")
+    return Response("wakie wakie is running!")
 
 
 # @post('/twiml')
@@ -43,8 +44,6 @@ def outbound_call(outbound_phone_number):
     specific Twilio phone number (that phone number must be owned by our
     Twilio account).
     """
-    # the url must match the Ngrok Forwarding URL plus the route defined in
-    # the previous function that responds with TwiML instructions
     twilio_client.calls.create(to=outbound_phone_number,
                                from_=TWILIO_NUMBER,
                                url=BASE_URL)
