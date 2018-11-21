@@ -1,9 +1,8 @@
 #!/usr/local/bin/python
+
 import os
 import bottle
 from bottle import route, run, post, Response
-# from twilio import twiml
-# from twilio.twiml.voice_response import VoiceResponse
 from twilio.rest import Client
 
 app = bottle.default_app()
@@ -16,7 +15,7 @@ AUTH_TOKEN = os.environ['AUTH_TOKEN']
 
 twilio_client = Client(ACCOUNT_SID, AUTH_TOKEN)
 
-TWILIO_NUMBER = os.environ.get('TWILIO_NUMBER', '+16507708871')
+TWILIO_NUMBER = os.environ.get('TWILIO_NUMBER', '+16473602674')
 BASE_URL = os.environ.get('BASE_URL', 'https://wakie-wakie.herokuapp.com')
 
 calls = twilio_client.calls.list()
@@ -26,17 +25,6 @@ calls = twilio_client.calls.list()
 def index():
     """Returns standard text response to show app is working."""
     return Response("wakie wakie is up and running!")
-
-
-# @post('/twiml')
-# def twiml_response():
-#     """Provides TwiML instructions in response to a Twilio POST webhook
-#     event so that Twilio knows how to handle the outbound phone call
-#     when someone picks up the phone.
-#     """
-#     response = VoiceResponse()
-#     response.say("Hello, this call is from a Bottle web application.")
-#     return Response(str(response))
 
 @route('/call-logs')
 def call_logs():
