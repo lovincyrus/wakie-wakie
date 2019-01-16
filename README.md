@@ -1,5 +1,7 @@
 # wakie-wakie
 
+Read more: [https://blog.lovincyrus.com/2018/automated-call/](https://blog.lovincyrus.com/2018/automated-call/)
+
 <p align="center">
   <img src="https://media.giphy.com/media/DorNejgFGiygE/giphy.gif" width="500" height="300"/>
 </p>
